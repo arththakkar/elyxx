@@ -12,12 +12,6 @@
  *
  * require_tree .
  *= require bootstrap
- *= require style
- *= require dark
- *= require font-icons
- *= require animate
- *= require magnific-popup
- *= require responsive
  *= require custom
  *= require grayscale
  *= require_self
