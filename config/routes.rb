@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'dashboard#index'
+  root 'welcome#index'
+  get 'dashboard', to: 'dashboard#index', as: :dashboard
   get 'contact_us', to: 'dashboard#contact_us', as: :contact_us
   post 'contact', to: 'dashboard#contact', as: :contact
   get 'gallery', to: 'dashboard#gallery', as: :gallery

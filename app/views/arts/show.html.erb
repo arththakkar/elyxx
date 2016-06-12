@@ -1,40 +1,102 @@
-<section id="slider" class="boxed-slider">
-	<div class="container clearfix">
-		<%= render "shared/error_messages" %>
-		
-		<div class="home-page-title">
-			<h1>EXXUDE</h1>
-		</div>
-	</div>
-</section>
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2" style="margin-top: 40px; margin-bottom: 40px">
+                    <br/>
+                    <h1 class="brand-heading">EXXPRESS</h1>
+                </div>
+                <ul id="rig">
+                    <li>
+                    	<div class="portfolio-wrapper">
+	                        <div class="portfolio-single">
+	                            <div class="portfolio-thumb">
+	                                <img src="/images/Full/1.jpg" class="img-responsive" alt="">
+	                            </div>
+	                            <div class="portfolio-view">
+	                                <ul class="nav nav-pills">
+	                                    <li><a href="<%= art_image_path(1, 1) %>"><i class="fa fa-link"></i></a></li>
+	                                    <li><a href="/images/Full/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+                        <!-- <a class="rig-cell" href="#">
+                            <img class="rig-img" src="/images/Full/1.jpg" height="40%" width="50%">
+                            <span class="rig-overlay"></span>
+                            <span class="rig-text"><i class="fa fa-link"></i></span>
+                        </a> -->
+                    </li>
+                    <li>
+                    	<div class="portfolio-wrapper">
+	                        <div class="portfolio-single">
+	                            <div class="portfolio-thumb">
+	                                <img src="/images/Full/2.jpg" class="img-responsive" alt="">
+	                            </div>
+	                            <div class="portfolio-view">
+	                                <ul class="nav nav-pills">
+	                                    <li><a href="<%= art_image_path(1, 2) %>"><i class="fa fa-link"></i></a></li>
+	                                    <li><a href="/images/Full/2.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+                        <!-- <a class="rig-cell" href="#">
+                            <img class="rig-img" src="/images/Full/2.jpg" height="40%" width="50%">
+                            <span class="rig-overlay"></span>
+                            <span class="rig-text"><i class="fa fa-link"></i></span>
+                        </a> -->
+                    </li>
+                </ul>
+                <ul id="rig">
+                    <li>
+                    	<div class="portfolio-wrapper">
+	                        <div class="portfolio-single">
+	                            <div class="portfolio-thumb">
+	                                <img src="/images/Full/4.jpg" class="img-responsive" alt="">
+	                            </div>
+	                            <div class="portfolio-view">
+	                                <ul class="nav nav-pills">
+	                                    <li><a href="<%= art_image_path(1, 4) %>"><i class="fa fa-link"></i></a></li>
+	                                    <li><a href="/images/Full/4.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+                        <!-- <a class="rig-cell" href="#">
+                            <img class="rig-img" src="/images/Full/5.jpg" height="40%" width="50%">
+                            <span class="rig-overlay"></span>
+                            <span class="rig-text"><i class="fa fa-link"></i></span>
+                        </a> -->
+                    </li>
+                    <li>
+                    	<div class="portfolio-wrapper">
+	                        <div class="portfolio-single">
+	                            <div class="portfolio-thumb">
+	                                <img src="/images/Full/5.jpg" class="img-responsive" alt="">
+	                            </div>
+	                            <div class="portfolio-view">
+	                                <ul class="nav nav-pills">
+	                                    <li><a href="<%= art_image_path(1, 5) %>"><i class="fa fa-link"></i></a></li>
+	                                    <li><a href="/images/Full/5.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+                        <!-- <a class="rig-cell" href="test.html">
+                            <img class="rig-img" src="/images/Full/4.jpg" height="40%" width="50%">
+                            <span class="rig-overlay"></span>
+                            <span class="rig-text"><i class="fa fa-link"></i></span>
+                        </a> -->
+                    </li>
+                </ul>
+            </div>
+            <br /><br />
+        </div>
+    </div>
+</header>
+<div class="navbar navbar-default" style="margin-bottom: 0 !important;">
+    <div class="container">
 
-<section id="content" style="margin-bottom: 0px;">
-  <div class="content-wrap">
-  	<div class="container clearfix">
-			<div class="col_full clearfix">
-
-				<div class="masonry-thumbs col-3" data-big="2" style="margin-right: -1px; position: relative; height: 855.702px;">
-					<a href="<%= art_image_path(params[:id], 1) %>" data-lightbox="gallery-item" style="width: 380px; position: absolute; left: 0px; top: 0px;"><img class="image_fade" src="/images/Full/1.jpg" alt="Gallery Thumb 1" style="opacity: 1;">
-						<span id="text"><span>||CLICK HERE||</span></span>
-					</a>
-					<a href="<%= art_image_path(params[:id], 2) %>" data-lightbox="gallery-item" style="width: 760px; position: absolute; left: 380px; top: 0px;"><img class="image_fade" src="/images/Full/2.jpg" alt="Gallery Thumb 2" style="opacity: 1;">
-					<span id="text" class="extra-top"><span>||BETTER IDEA||</span></span>
-					</a>
-					<a href="<%= art_image_path(params[:id], 3) %>" data-lightbox="gallery-item" style="width: 380px; position: absolute; left: 0px; top: 285px;"><img class="image_fade" src="/images/Full/3.jpg" alt="Gallery Thumb 3" style="opacity: 1;">
-						<span id="text"><span>||CAN'T LOSE||</span></span>
-					</a>
-					<a href="<%= art_image_path(params[:id], 4) %>" data-lightbox="gallery-item" style="width: 380px; position: absolute; left: 380px; top: 570px;"><img class="image_fade" src="/images/Full/4.jpg" alt="Gallery Thumb 4">
-					<span id="text"><span>||OH MY!!||</span></span>
-					</a>
-					<a href="<%= art_image_path(params[:id], 5) %>" data-lightbox="gallery-item" style="width: 380px; position: absolute; left: 760px; top: 570px;"><img class="image_fade" src="/images/Full/5.jpg" alt="Gallery Thumb 5"
-					<span id="text"><span>||LAST AND BEST||</span></span>
-					</a>
-					<a href="<%= art_image_path(params[:id], 6) %>" data-lightbox="gallery-item" style="width: 380px; position: absolute; left: 0px; top: 570px;"><img class="image_fade" src="/images/Full/6.jpg" alt="Gallery Thumb 6">
-					<span id="text"><span>||CLICK HERE||</span></span>
-					</a>
-				</div>
-
-			</div>
-		</div>
-	</div>
-</section>
+    </div>
+</div>

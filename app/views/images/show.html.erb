@@ -1,6 +1,31 @@
-<section id="slider" class="boxed-slider">
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2" style="margin-top: 40px; margin-bottom: 40px">
+                    <br/>
+                    <h1 class="brand-heading">EXXUDE</h1>
+                    <br />
+                    <%= image_tag "/images/Full/#{params[:id]}.jpg", height: "400px", width: "800px" %>
+                    <br />
+                    <p class="intro-text">
+                      <%= link_to "Project To Screen", "#", class: "intro-text castme" %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="navbar navbar-default" style="margin-bottom: 0 !important;">
+    <div class="container">
+
+    </div>
+</div>
+
+<!-- <section id="slider" class="boxed-slider">
   <div class="container clearfix">
-    <%= render "shared/error_messages" %>
+    <%#= render "shared/error_messages" %>
     
     <div class="home-page-title">
       <h1>EXXPERIENCE</h1>
@@ -10,16 +35,16 @@
 <section id="content" style="margin-bottom: 0px;">
   <div class="content-wrap">
     <div class="container clearfix center">
-      <%= image_tag "/images/Full/#{params[:id]}.jpg", height: "400px", width: "800px" %>
+      <%#= image_tag "/images/Full/#{params[:id]}.jpg", height: "400px", width: "800px" %>
     </div>
     <div class="center">
-      <%= link_to "Project To Screen", "#", class: "button button-xlarge button-rounded castme" %>
+      <%#= link_to "Project To Screen", "#", class: "button button-xlarge button-rounded castme" %>
     </div>
     <div class="center">
-      <%= link_to "<i class='icon-reply'></i>".html_safe, art_path(params[:art_id]), title: "Back To Gallery", style: "color: black;" %>
+      <%#= link_to "<i class='icon-reply'></i>".html_safe, art_path(params[:art_id]), title: "Back To Gallery", style: "color: black;" %>
     </div>
   </div>
-</section>
+</section> -->
 
 <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
