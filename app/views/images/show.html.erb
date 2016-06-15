@@ -97,6 +97,7 @@ function onInitError() {
 }
 
 $('.castme').click(function(){
+  collection_name = "collection_" + <%= params[:art_id] %>
   image_name = <%= params[:id] %>
   launchApp();
 });
@@ -126,7 +127,7 @@ function loadMedia() {
     console.log("No session.");
     return;
   }
-  var mediaInfo = new chrome.cast.media.MediaInfo('http://mvp.elyxx.com/images/Full/'+image_name+'.jpg');
+  var mediaInfo = new chrome.cast.media.MediaInfo('http://mvp.elyxx.com/images/Full/'+collection_name+'/'+image_name+'.jpg');
   mediaInfo.contentType = 'image/jpg';
   
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
