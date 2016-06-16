@@ -16,4 +16,5 @@
 //= require bootstrap.min
 //= require jquery.easing.min
 //= require custom
+//= require lightbox.min
 // require_tree .

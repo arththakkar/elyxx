@@ -22,9 +22,10 @@
  *= require animate
  *= require responsive
  *= require custom
- *= require font-awesome.min
  *= require_self
  */
+
+@import "font-awesome";
 
 .padding-20{
 	padding: 20px;
