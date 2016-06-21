@@ -4,6 +4,11 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ @font-face {
+    font-family: gillSansLight;
+    src: url(asset-path('gillsans_light.ttf'));
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -92,8 +97,8 @@ a:focus {
 
 .intro .intro-body .brand-heading {
     font-size: 40px;
-    font-weight: normal;
-    font-family: "Gill Sans Light", sans-serif !important;
+    font-family: gillSansLight !important;
+    letter-spacing: 3px !important;
 }
 
 .intro .intro-body .intro-text {
@@ -109,7 +114,8 @@ a:focus {
 
     .intro .intro-body .brand-heading {
         font-size: 80px;
-        font-family: "Gill Sans Light", sans-serif !important;
+        font-family: gillSansLight !important;
+        letter-spacing: 6px !important;
     }
 
     .intro .intro-body .intro-text {
