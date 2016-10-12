@@ -10,7 +10,7 @@
                     <%= image_tag "/images/Full/collection_#{params[:art_id]}/#{params[:id]}.jpg", height: "400px", width: "800px" %>
                     <br />
                     <p class="intro-text" style="margin: 0 !important; padding-left: 25px !important;">
-                      <%= link_to "Cast To Screen", "#", class: "intro-text castme" %>
+                      <%= button_tag "Cast To Screen", class: "intro-text castme", style: "background: transparent; border: none;" %>
                     </p>
                 </div>
             </div>
@@ -52,6 +52,7 @@
 <script type="text/javascript">
 	var session = null;
 var image_name = null;
+var collection_name = null;
 
 $(document).ready(function(){
   var loadCastInterval = setInterval(function(){
@@ -83,6 +84,7 @@ function sessionListener(e) {
 function receiverListener(e) {
   if( e === 'available' ) {
     console.log("Chromecast was found on the network.");
+    console.log("<%= "==#{params[:art_id]}====#{params[:id]}====" %>")
   }
   else {
     console.log("There are no Chromecasts available.");
@@ -91,6 +93,7 @@ function receiverListener(e) {
 
 function onInitSuccess() {
   console.log("Initialization succeeded");
+  // chrome.cast.requestSession(onRequestSessionSuccess, onLaunchError);
 }
 
 function onInitError() {
@@ -108,19 +111,19 @@ function launchApp() {
   chrome.cast.requestSession(onRequestSessionSuccess, onLaunchError);
 }
 
-function onRequestSessionSuccess(e) {
-  console.log("Successfully created session: " + e.sessionId);
-  session = e;
-}
+// function onRequestSessionSuccess(e) {
+//   console.log("Successfully created session: " + e.sessionId);
+//   session = e;
+// }
 
-function onLaunchError() {
-  console.log("Error connecting to the Chromecast.");
-}
 
 function onRequestSessionSuccess(e) {
   console.log("Successfully created session: " + e.sessionId);
   session = e;
   loadMedia();
+}
+function onLaunchError() {
+  console.log("Error connecting to the Chromecast.");
 }
 
 function loadMedia() {
