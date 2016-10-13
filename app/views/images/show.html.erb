@@ -75,7 +75,6 @@ function initializeCastApi() {
 
 function sessionListener(e) {
   session = e;
-  console.log('New session' + session.sessionId);
   if (session.media.length != 0) {
     console.log('Found ' + session.media.length + ' sessions.');
   }
