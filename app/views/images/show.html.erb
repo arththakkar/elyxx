@@ -75,7 +75,7 @@ function initializeCastApi() {
 
 function sessionListener(e) {
   session = e;
-  console.log('New session');
+  console.log('New session' + session.sessionId);
   if (session.media.length != 0) {
     console.log('Found ' + session.media.length + ' sessions.');
   }
@@ -107,8 +107,15 @@ $('.castme').click(function(){
 });
 
 function launchApp() {
-  console.log("Launching the Chromecast App...");
-  chrome.cast.requestSession(onRequestSessionSuccess, onLaunchError);
+  console.log("Launching the Chromecast App..." + session.sessionId);
+  if(session.sessionId == "")
+  {
+    chrome.cast.requestSession(onRequestSessionSuccess, onLaunchError);
+  }
+  else
+  {
+    loadMedia();
+  }
 }
 
 // function onRequestSessionSuccess(e) {
