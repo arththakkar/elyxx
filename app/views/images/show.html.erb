@@ -107,7 +107,7 @@ $('.castme').click(function(){
 
 function launchApp() {
   console.log("Launching the Chromecast App...");
-  if(session != null && session.sessionId == "")
+  if(session == null || session.sessionId == "")
   {
     chrome.cast.requestSession(onRequestSessionSuccess, onLaunchError);
   }
